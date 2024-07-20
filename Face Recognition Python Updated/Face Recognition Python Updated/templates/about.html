@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style type="text/css">
+      * {
+        padding: 0;
+        margin: 0;
+        font-family: cursive;
+      }
+
+      .navbar {
+        background-color: #fff;
+        border-radius: 1rem 1rem 0rem 0rem;
+        height: 5.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-bottom: 3px solid #5f8ae6;
+      }
+      .navbar_info_2 {
+        height: 3rem;
+        width: 30rem;
+        display: flex;
+        justify-content: space-around;
+      }
+      .navbar_align {
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .logo {
+        height: 4rem;
+        width: 10rem;
+        cursor: pointer;
+      }
+      .Home {
+        padding: 0.2rem 1rem;
+        height: 3rem;
+        width: 6rem;
+        color: #fff;
+        background-color: #526d82;
+        border-radius: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: cursive;
+        font-size: 26px;
+        font-weight: 500;
+        cursor: pointer;
+        text-decoration: none;
+      }
+      .Home:hover {
+        padding: 0.2rem 1rem;
+        height: 3rem;
+        width: 6rem;
+        background-color: #9db2bf;
+        border-radius: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: cursive;
+        font-size: 22px;
+        font-weight: 500;
+        cursor: pointer;
+      }
+      .Add_user {
+        padding: 0.2rem 1rem;
+        color: whitesmoke;
+        height: 3rem;
+        width: 8rem;
+        background-color: #526d82;
+        border-radius: 1rem;
+        font-family: cursive;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 26px;
+        font-weight: 500;
+        cursor: pointer;
+        text-decoration: none;
+      }
+      .Add_user:hover {
+        height: 3rem;
+        width: 8rem;
+        background-color: #9db2bf;
+        border-radius: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: cursive;
+        font-size: 22px;
+        font-weight: 500;
+        cursor: pointer;
+      }
+      .Take_att {
+        padding: 0.2rem 1rem;
+        color: whitesmoke;
+        height: 3rem;
+        width: 14rem;
+        background-color: #526d82;
+        border-radius: 1rem;
+        font-family: cursive;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 26px;
+        font-weight: 500;
+        cursor: pointer;
+        text-decoration: none;
+      }
+      .Take_att:hover {
+        height: 3rem;
+        width: 14rem;
+        background-color: #9db2bf;
+        border-radius: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: cursive;
+        font-size: 22px;
+        font-weight: 500;
+        cursor: pointer;
+      }
+      .About {
+        padding: 0.2rem 1rem;
+        color: whitesmoke;
+        height: 3rem;
+        width: 6rem;
+        background-color: #526d82;
+        border-radius: 1rem;
+        font-family: cursive;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 26px;
+        font-weight: 500;
+        cursor: pointer;
+        text-decoration: none;
+      }
+      .About:hover {
+        height: 3rem;
+        width: 6rem;
+        background-color: #9db2bf;
+        border-radius: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: cursive;
+        font-size: 22px;
+        font-weight: 500;
+        cursor: pointer;
+      }
+
+      body {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 3.5rem;
+      }
+
+      .btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 3rem;
+        font-size: 26px;
+        font-weight: bold;
+        border-radius: 10px;
+        width: 490px;
+        padding: 10px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        background-color: #1541a0;
+        color: white;
+        border: none;
+        text-decoration: none;
+        gap: 0.5rem;
+      }
+
+      .btn:hover {
+        background-color: #1541a0;
+        font-size: 22px;
+      }
+      .about_container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .about_align {
+        width: 90%;
+      }
+      .header_about {
+        color: #153475;
+        padding: 1rem 0rem;
+      }
+      .about_body {
+        font-size: 18px;
+      }
+      .first_pg {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .first_pg_align {
+        width: 90%;
+      }
+      .intro_about {
+        padding: 1rem 0rem;
+      }
+      .about_team {
+        padding: 1rem 0rem;
+      }
+      .hi_light {
+        color: #992ac5;
+        font-size: 20px;
+      }
+      .hi_light2 {
+        color: #d31c49;
+        font-size: 20px;
+      }
+      .hi_light3 {
+        color: #181be7;
+        font-size: 20px;
+      }
+      .about_target {
+        padding: 1rem 0rem;
+      }
+      .about_team_info {
+        padding: 1rem 0rem;
+      }
+      .about_team_info_align {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .team_mate {
+        padding: 1rem 0rem;
+        width: 91%;
+      }
+      .about_guide {
+        padding: 1rem 0rem;
+      }
+      .about_algo {
+        padding: 1rem 0rem;
+      }
+      .small_info {
+        padding: 1rem 0rem;
+      }
+      .about_algo_align {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .algos {
+        width: 90%;
+      }
+      .about_conclusion {
+        padding: 1rem 0rem;
+      }
+    </style>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>About</title>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="navbar_align">
+        <a href="/">
+          <img class="logo" src="../static/TRACE.png" alt="" />
+        </a>
+        <div class="navbar_info_2">
+          <a href="/home" class="Home">Home</a>
+          <a href="/add_user" class="Add_user">Add User</a>
+          <a href="/about" class="About">About</a>
+        </div>
+      </div>
+    </div>
+    <div class="about_container">
+      <div class="about_align">
+        <div class="about_body">
+          <h1 class="header_about">About Us</h1>
+          <div class="first_pg">
+            <div class="first_pg_align">
+
+              <div class="intro_about">
+                Welcome to the "Smart Registration and Attendance System Using Face
+                Recognition" project website, a pioneering initiative developed as a
+                part of our final year Bachelor of Engineering project.
+              </div>
+              <div class="about_team">
+                This innovative solution has been crafted by a dedicated team of
+                aspiring engineers, including <line class="hi_light">Raj Dutta Phurailatpam</line>, <line class="hi_light">Arick Yumnam</line>,
+                <line class="hi_light">Waikhom Bineshwor</line>, and <line class="hi_light">Md Shuaib Khan</line>, under the expert guidance of
+                <line class="hi_light">Dr. Rajeev Rajkumar</line>.
+              </div>
+              <div class="about_target">
+                Our Vision In an increasingly digital world, traditional methods of
+                registration and attendance tracking can be cumbersome and
+                inefficient. Our vision is to revolutionize this process by
+                leveraging cutting-edge face recognition technology, making it
+                seamless, secure, and highly efficient. We aim to create a system
+                that not only simplifies administrative tasks but also enhances the
+                overall user experience.
+              </div>
+            </div>
+          </div>
+          <div class="about_team_info">
+            <h2 class="header_about">Our Team</h2>
+            <div class="about_team_info_align">
+              <ul class="team_mate">
+                <li>
+                  <div class="hi-light"></div>
+                  <line class="hi_light">Raj Dutta Phurailatpam</line>: A tech enthusiast with a keen interest
+                  in artificial intelligence and machine learning, Raj has been
+                  instrumental in developing the core algorithms for face
+                  recognition in this project.
+                </li>
+                <li>
+                  <line class="hi_light">Arick Yumnam</line>: With a strong background in software development
+                  and system integration, Arick has focused on creating a robust
+                  and user-friendly interface for our system.
+                </li>
+                <li>
+                  <line class="hi_light">Waikhom Bineshwor</line>: Bineshwor’s expertise in user interface,userdatabase management
+                  and backend development has been critical in ensuring the smooth
+                  operation and scalability of our system.
+                </li>
+                <li>
+                  <line class="hi_light">Md Shuaib Khan</line>: A cybersecurity aficionado, Shuaib has ensured
+                  that our system is secure and reliable, protecting sensitive
+                  data with the highest standards of security.
+                </li>
+              </ul>
+            </div>
+            <div class="about_guide">
+              Our Guide <line class="hi_light">Dr. Rajeev Rajkumar</line>, a distinguished professor with
+              extensive experience in computer science and engineering, has
+              provided invaluable guidance and mentorship throughout the
+              development of this project. His insights and support have been
+              crucial in turning our vision into reality.
+            </div>
+            <div class="about_algo">
+              <div class="small_info">
+                The Project The <line class="hi_light2">Smart Registration and Attendance System Using
+                Face Recognition</line>"" is designed to streamline and automate the
+                process of attendance tracking and registration using advanced
+                face recognition technology. 
+                
+              </div>
+              <h2 class="header_about">Key features of our system include:</h2>
+              <div class="about_algo_align">
+                <ul class="algos">
+                  <li>
+                    <line class="hi_light3">Automated Attendance Tracking</line>: Eliminate the need for manual
+                    attendance taking with our automated system that recognizes
+                    and records attendance in real-time.
+                  </li>
+                  <li>
+                    <line class="hi_light3">Secure and Reliable</line>: Utilizing state-of-the-art security
+                    measures, our system ensures that all data is protected and
+                    access is controlled.
+                  </li>
+                  <li>
+                    <line class="hi_light3">User-Friendly Interface</line>: Designed with ease of use in mind,
+                    our system offers a simple and intuitive interface for both
+                    administrators and users.
+                  </li>
+                  <li>
+                    <line class="hi_light3">Scalability</line>: Our system is built to handle varying sizes of
+                    user bases, making it suitable for institutions of all sizes.
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="about_conclusion">
+              We believe that our project will significantly enhance the
+              efficiency of registration and attendance processes in educational
+              institutions and beyond. Thank you for visiting our website, and
+              we look forward to sharing more about our journey and innovations
+              with you.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

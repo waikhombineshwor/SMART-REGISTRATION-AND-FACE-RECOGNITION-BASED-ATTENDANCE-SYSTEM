@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style type="text/css">
+      * {
+        padding: 0;
+        margin: 0;
+      }
+
+      body {
+        font-family: cursive;
+        margin-top: 5px;
+        padding: 0;
+      }
+      .navbar {
+        background-color: #fff;
+        border-radius: 1rem 1rem 0rem 0rem;
+        height: 5.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-bottom: 3px solid #5f8ae6;
+        margin-bottom: 1rem;
+      }
+      .navbar_info_1 {
+        height: 3rem;
+        width: 36rem;
+        display: flex;
+        justify-content: space-around;
+      }
+      .navbar_align {
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .logo {
+        height: 4rem;
+        width: 10rem;
+        cursor: pointer;
+      }
+      .navbar_info {
+        height: 3rem;
+        width: 30rem;
+        display: flex;
+        justify-content: space-around;
+      }
+      .Home {
+        padding: 0.2rem 1rem;
+        height: 3rem;
+        width: 6rem;
+        color: #fff;
+        background-color: #526D82;
+        border-radius: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: cursive;
+        font-size: 26px;
+        font-weight: 500;
+        cursor: pointer;
+        text-decoration: none;
+      }
+      .Home:hover {
+        padding: 0.2rem 1rem;
+        height: 3rem;
+        width: 6rem;
+        background-color: #9DB2BF;
+        border-radius: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: cursive;
+        font-size: 22px;
+        font-weight: 500;
+        cursor: pointer;
+      }
+      .Take_att {
+        padding: 0.2rem 1rem;
+        color: whitesmoke;
+        height: 3rem;
+        width: 14rem;
+        background-color: #526D82;
+        border-radius: 1rem;
+        font-family: cursive;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 26px;
+        font-weight: 500;
+        cursor: pointer;
+        text-decoration: none;
+      }
+      .Take_att:hover {
+        height: 3rem;
+        width: 14rem;
+        background-color: #9DB2BF;
+        border-radius: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: cursive;
+        font-size: 22px;
+        font-weight: 500;
+        cursor: pointer;
+      }
+      .About {
+        padding: 0.2rem 1rem;
+        color: whitesmoke;
+        height: 3rem;
+        width: 6rem;
+        background-color: #526d82;
+        border-radius: 1rem;
+        font-family: cursive;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 26px;
+        font-weight: 500;
+        cursor: pointer;
+        text-decoration: none;
+      }
+      .About:hover {
+        height: 3rem;
+        width: 6rem;
+        background-color: #9db2bf;
+        border-radius: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: cursive;
+        font-size: 22px;
+        font-weight: 500;
+        cursor: pointer;
+      }
+      .btn-dark{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 50px;
+        width: 200px;
+        font-size: 26px;
+        font-weight: bold;
+        border-radius: 10px;
+        padding: 10px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+       margin-left: 577px;
+        background-color: #e1423f;
+        color: white;
+        border: none;
+        text-decoration: none;
+        gap: .5rem;
+      }
+      .btn-dark:hover{
+        font-size: 22px;
+        border-radius: 10px;
+        width: 200px;
+        height: 50px;
+        background-color: #B7413F;
+      }
+    </style>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+
+    <title>Face Recognition Based Attendance System</title>
+  </head>
+
+  <body>
+    <div class="navbar">
+      <div class="navbar_align">
+        <a href="/">
+          <img class="logo" src="../static/TRACE.png" alt="" />
+        </a>
+        <div class="navbar_info_1">
+          <a class="Home" href="/">Home</a>
+          <a href="/attendance" class="Take_att">Take Attendance</a>
+          <a href="/about" class="About">About</a>
+        </div>
+      </div>
+    </div>
+
+    {% if mess %}
+    <p class="text-center" style="color: red; font-size: 20px">{{ mess }}</p>
+    {% endif %}
+
+    <div class="row text-center" style="padding: 20px; margin: 20px;text-align: center;">
+      <div class="col" style="border-radius: 20px; background-color: #85d6ed; padding: 0px; margin: 0px 10px 10px 10px; min-height: 400px;text-align: center;">
+          <h2 style="border-radius: 20px 20px 0px 0px; background-color: #1541a0; color: white; padding: 10px; display:flex; justify-content:center; align-items: center; gap: 0.7rem; font-family: cursive;">Add New User <i class="material-icons">control_point_duplicate</i></h2>
+          <form action="/add_user" method="POST" enctype="multipart/form-data">
+              <div style="padding: 1rem 1rem 1rem 3rem;text-align: center;">
+                  <label for="newusername" style="font-size: 20px; color: black"><b>Enter New User Name*</b></label><br />
+                  <input type="text" id="newusername" name="newusername" style="font-size: 20px; margin-top: 10px; margin-bottom: 10px; border-radius: 10px; width: 300px; height: 50px;" required/><br />
+
+                  <label for="newuserid" style="font-size: 20px; color: black"><b>Enter New User Id*</b></label><br />
+                  <input type="number" id="newuserid" name="newuserid" style="font-size: 20px; margin-top: 10px; margin-bottom: 10px; border-radius: 10px; width: 300px; height: 50px;" required/><br />
+
+                  <label for="contact" style="font-size: 20px; color: black"><b>Contact Number</b></label><br />
+                  <input type="text" id="contact" name="contact" style="font-size: 20px; margin-top: 10px; margin-bottom: 10px; border-radius: 10px; width: 300px; height: 50px;" /><br />
+
+                  <label for="email" style="font-size: 20px; color: black"><b>Email Id</b></label><br />
+                  <input type="email" id="email" name="email" style="font-size: 20px; margin-top: 10px; margin-bottom: 10px; border-radius: 10px; width: 300px; height: 50px;" /><br />
+
+                  <label for="gender" style="font-size: 20px; color: black"><b>Gender</b></label><br />
+                  <select id="gender" name="gender" style="font-size: 20px; margin-top: 10px; margin-bottom: 10px; border-radius: 10px; width: 300px; height: 50px;">
+                      <option value="male">Male</option>
+                      <option value="female">Female</option>
+                      <option value="other">Other</option>
+                  </select><br />
+
+                  <label for="address" style="font-size: 20px; color: black"><b>Address</b></label><br />
+                  <textarea id="address" name="address" rows="4" style="font-size: 20px; margin-top: 10px; margin-bottom: 10px; border-radius: 10px; width: 300px;"></textarea><br />
+
+                  <label for="dob" style="font-size: 20px; color: black"><b>Date of Birth</b></label><br />
+                  <input type="date" id="dob" name="dob" style="font-size: 20px; margin-top: 10px; margin-bottom: 10px; border-radius: 10px; width: 300px; height: 50px;" /><br />
+
+                  <button type="submit" class="btn btn-dark">Add New User</button><br />
+                  <h5 style="padding: 25px; color: black"><i>Total Users in Database: {{ totalreg }}</i></h5>
+              </div>
+          </form>
+      </div>
+  </div>
+</body>
+</html>

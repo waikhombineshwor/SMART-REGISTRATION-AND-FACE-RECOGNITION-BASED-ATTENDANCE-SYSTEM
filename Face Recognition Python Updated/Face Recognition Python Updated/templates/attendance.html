@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style type="text/css">
+      * {
+        padding: 0;
+        margin: 0;
+      }
+
+      body {
+        font-family: cursive;
+        margin-top: 5px;
+        padding: 0;
+      }
+
+      .navbar {
+        background-color: #fff;
+        border-radius: 1rem 1rem 0rem 0rem;
+        height: 5.5rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-bottom: 3px solid #5f8ae6;
+        margin-bottom: 1rem;
+      }
+      .navbar_info_2 {
+        height: 3rem;
+        width: 30rem;
+        display: flex;
+        justify-content: space-around;
+      }
+      .navbar_align {
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .logo {
+        height: 4rem;
+        width: 10rem;
+        cursor: pointer;
+      }
+      .navbar_info {
+        height: 3rem;
+        width: 30rem;
+        display: flex;
+        justify-content: space-around;
+      }
+      .Home {
+        padding: 0.2rem 1rem;
+        height: 3rem;
+        width: 6rem;
+        color: #fff;
+        background-color: #526d82;
+        border-radius: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: cursive;
+        font-size: 26px;
+        font-weight: 500;
+        cursor: pointer;
+        text-decoration: none;
+      }
+      .Home:hover {
+        padding: 0.2rem 1rem;
+        height: 3rem;
+        width: 6rem;
+        background-color: #9db2bf;
+        border-radius: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: cursive;
+        font-size: 22px;
+        font-weight: 500;
+        cursor: pointer;
+      }
+      .Add_user {
+        padding: 0.2rem 1rem;
+        color: whitesmoke;
+        height: 3rem;
+        width: 8rem;
+        background-color: #526d82;
+        border-radius: 1rem;
+        font-family: cursive;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 26px;
+        font-weight: 500;
+        cursor: pointer;
+        text-decoration: none;
+      }
+      .Add_user:hover {
+        height: 3rem;
+        width: 8rem;
+        background-color: #9db2bf;
+        border-radius: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: cursive;
+        font-size: 22px;
+        font-weight: 500;
+        cursor: pointer;
+      }
+      .About {
+        padding: 0.2rem 1rem;
+        color: whitesmoke;
+        height: 3rem;
+        width: 6rem;
+        background-color: #526d82;
+        border-radius: 1rem;
+        font-family: cursive;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 26px;
+        font-weight: 500;
+        cursor: pointer;
+        text-decoration: none;
+      }
+      .About:hover {
+        height: 3rem;
+        width: 6rem;
+        background-color: #9db2bf;
+        border-radius: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: cursive;
+        font-size: 22px;
+        font-weight: 500;
+        cursor: pointer;
+      }
+      .btn_1 {
+        font-size: 26px;
+        font-weight: bold;
+        border-radius: 10px;
+        width: 490px;
+        padding: 10px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        font-family: cursive;
+        cursor: pointer;
+        background-color: #526d82;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5em;
+      }
+      .btn_1:hover {
+        font-size: 22px;
+        font-weight: bold;
+        border-radius: 10px;
+        width: 490px;
+        padding: 13px;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        font-family: cursive;
+        cursor: pointer;
+        background-color: #9db2bf;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5em;
+      }
+
+      table {
+        border-radius: 20px;
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 86%;
+        margin: auto;
+      }
+
+      td,
+      th {
+        padding: 10px;
+      }
+
+      tr:nth-child(even) {
+        background-color: #c9b38e;
+      }
+    </style>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+
+    <title>Face Recognition Based Attendance System</title>
+  </head>
+
+  <body>
+    <div class="navbar">
+      <div class="navbar_align">
+        <a href="/">
+          <img class="logo" src="../static/TRACE.png" alt="" />
+        </a>
+        <div class="navbar_info_2">
+          <a class="Home" href="/">Home</a>
+          <a href="/add_user" class="Add_user">Add User</a>
+          <a href="/about" class="About">About</a>
+        </div>
+      </div>
+    </div>
+
+    {% if mess %}
+    <p class="text-center" style="color: red; font-size: 20px">{{ mess }}</p>
+    {% endif %}
+
+    <div class="row text-center" style="padding: 20px; margin: 20px">
+      <div
+        class="col"
+        style="
+          border-radius: 20px;
+          padding: 0px;
+          background-color: #85d6ed;
+          margin: 0px 10px 10px 10px;
+          min-height: 400px;
+        "
+      >
+        <h2
+          style="
+            background-color: #1541a0;
+            color: white;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 0.7rem;
+            font-family: cursive;
+            border-radius: 20px 20px 0px 0px;
+            border: 3px solid #212c44;
+          "
+        >
+          Today's Attendance <i class="material-icons">assignment</i>
+        </h2>
+
+        <div
+          style="display: flex; justify-content: center; align-items: center"
+        >
+          <a
+            style="
+              text-decoration: none;
+              max-width: 300px;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              cursor: pointer;
+            "
+            href="/start"
+          >
+            <button type="submit" class="btn btn-primary btn_1">
+              Take Attendance <i class="material-icons">beenhere</i>
+            </button>
+          </a>
+        </div>
+
+        <table style="background-color: #1541a0; color: #fff">
+          <tr>
+            <td><b>S No</b></td>
+            <td><b>Name</b></td>
+            <td><b>ID</b></td>
+            <td><b>Time</b></td>
+          </tr>
+          {% if l %} {% for i in range(l) %}
+          <tr>
+            <td>{{ i+1 }}</td>
+            <td>{{ names[i] }}</td>
+            <td>{{ rolls[i] }}</td>
+            <td>{{ times[i] }}</td>
+          </tr>
+          {% endfor %} {% endif %}
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

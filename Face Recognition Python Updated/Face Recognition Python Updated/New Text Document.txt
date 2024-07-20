@@ -1,0 +1,29 @@
+About Us
+
+Welcome to the "Smart Registration and Attendance System Using Face Recognition" project website, a pioneering initiative developed as a part of our final year Bachelor of Engineering project. This innovative solution has been crafted by a dedicated team of aspiring engineers, including Raj Dutta Phurailatpam, Arick Yumnam, Waikhom Bineshwor, and Md Shuaib Khan, under the expert guidance of Dr. Rajeev Rajkumar.
+
+Our Vision
+
+In an increasingly digital world, traditional methods of registration and attendance tracking can be cumbersome and inefficient. Our vision is to revolutionize this process by leveraging cutting-edge face recognition technology, making it seamless, secure, and highly efficient. We aim to create a system that not only simplifies administrative tasks but also enhances the overall user experience.
+
+Our Team
+
+- Raj Dutta Phurailatpam: A tech enthusiast with a keen interest in artificial intelligence and machine learning, Raj has been instrumental in developing the core algorithms for face recognition in this project.
+- Arick Yumnam: With a strong background in software development and system integration, Arick has focused on creating a robust and user-friendly interface for our system.
+- Waikhom Bineshwor: Bineshwor’s expertise in database management and backend development has been critical in ensuring the smooth operation and scalability of our system.
+- Md Shuaib Khan: A cybersecurity aficionado, Shuaib has ensured that our system is secure and reliable, protecting sensitive data with the highest standards of security.
+
+Our Guide
+
+Dr. Rajeev Rajkumar, a distinguished professor with extensive experience in computer science and engineering, has provided invaluable guidance and mentorship throughout the development of this project. His insights and support have been crucial in turning our vision into reality.
+
+The Project
+
+The "Smart Registration and Attendance System Using Face Recognition" is designed to streamline and automate the process of attendance tracking and registration using advanced face recognition technology. Key features of our system include:
+
+- Automated Attendance Tracking:** Eliminate the need for manual attendance taking with our automated system that recognizes and records attendance in real-time.
+- Secure and Reliable:** Utilizing state-of-the-art security measures, our system ensures that all data is protected and access is controlled.
+- User-Friendly Interface:** Designed with ease of use in mind, our system offers a simple and intuitive interface for both administrators and users.
+- Scalability:** Our system is built to handle varying sizes of user bases, making it suitable for institutions of all sizes.
+
+We believe that our project will significantly enhance the efficiency of registration and attendance processes in educational institutions and beyond. Thank you for visiting our website, and we look forward to sharing more about our journey and innovations with you.
